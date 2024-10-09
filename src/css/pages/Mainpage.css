@@ -1,0 +1,94 @@
+/* 메인 컨테이너 */
+
+  /* 아이콘 스타일 */
+  .icon-wrapper {
+    margin-bottom: 50px;
+  }
+  
+  .main-icon {
+    margin-top: 150px;
+    width: 120px;
+    height: 150px;
+  }
+  
+  /* 인사말 텍스트 스타일 */
+  /* 인사말 텍스트 스타일 */
+.greeting-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 166, 0, 0.699);
+    margin-bottom: 30px;
+    line-height: 1.5;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+    border-right: 2px solid; /* 타이핑 효과를 위한 커서 */
+    width: 0; /* 초기 너비 0 */
+    animation: typing 3.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  }
+  
+  /* 타이핑 애니메이션 */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* 요소의 전체 너비까지 타이핑 */
+    }
+  }
+  
+  /* 커서 깜빡임 애니메이션 */
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+  
+  /* 커서 깜빡임 중지 */
+  .greeting-text.finished {
+    border-right: none; /* 커서 제거 */
+  }
+  
+  
+/* 채팅 입력창 래퍼 */
+.chat-input-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  /* 채팅 입력창 스타일 */
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding-right: 40px; /* 버튼 공간을 위해 여유 */
+  }
+  
+  /* 제출 버튼 스타일 */
+  .submit-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* 버튼 크기 */
+    height: 30px;
+    background-color: orange; /* 버튼 배경색 */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .submit-button img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+  }

@@ -1,0 +1,35 @@
+.background {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    transition: all 5s ease-in-out;
+    
+  }
+  
+  .circle1 {
+    width: 50%;
+    height: 125px;
+    left: 0px;
+    top: 30px;
+    background: #fda839; /* 주황색 (오렌지) */
+    animation: swap 10s infinite;
+
+  }
+  
+  .circle2 {
+    width: 50%;
+    height: 160px;
+    left: 181px;
+    top: 40px;
+    background: #fda839; /* 진한 주황색 */
+    animation: swap 10s infinite;
+
+  }
+  

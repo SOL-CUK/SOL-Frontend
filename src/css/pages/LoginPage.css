@@ -1,0 +1,112 @@
+/* 메인 */
+.container {
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: left; /* 왼쪽 정렬 */
+  width: 100%; /* 전체 너비 차지 */
+  color: rgb(48, 48, 48); /* 변경된 텍스트 색상 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 입체감 있는 텍스트 그림자 */
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rabbit-image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rabbit-image img {
+  width: 103px;
+  height: 135px;
+}
+
+.green-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  gap: 30px;
+}
+
+.green-div {
+  background-color: #fda839; /* 새로운 메인 컬러 */
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 227px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-div {
+  background-color: white;
+  border: 1px solid #fda839;
+  color: black;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 290px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-div span {
+  color: #fda839;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.main-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* 변경된 텍스트 색상 */
+}
+
+.gray-text {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #999; /* 변경된 그레이 텍스트 */
+}
+
+.kakao-login-button {
+  margin-top: 50px;
+  width: 80%;
+  height: 60px;
+  background-color: #ffe812;
+  border: none;
+  font-family: 'Pretendard';
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  display: flex; /* 버튼 내부 요소를 flex로 설정 */
+  justify-content: center; /* 버튼 내부 요소 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+}
+
+.kakaoimg {
+  width: 24px;
+  height: 24px;
+  margin-right: 7px; /* 이미지와 텍스트 사이의 마진 */
+}

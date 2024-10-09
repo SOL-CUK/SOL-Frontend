@@ -1,0 +1,88 @@
+/* src/css/pages/Chatpage.css */
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+  }
+  
+  .chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allow messages to scroll */
+  }
+  
+  .ai-message, .user-message {
+    display: flex;
+    margin: 10px 0;
+  }
+  
+  .ai-message {
+    justify-content: flex-start;
+  }
+  
+  .user-message {
+    justify-content: flex-end;
+  }
+  
+  .message-bubble {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    font-size: 14px;
+  }
+  
+  .ai-message .message-bubble {
+    background-color: #1feb58;
+    color: white;
+  }
+  
+  .user-message .message-bubble {
+    background-color: #e0e0e0;
+    color: black;
+  }
+
+  .chatpage-input-wrapper {
+    position: relative;
+    display: flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 채팅 입력창 스타일 */
+  .chatpage-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding-right: 40px; /* 버튼 공간을 위해 여유 */
+  }
+  
+  /* 제출 버튼 스타일 */
+  .submit-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* 버튼 크기 */
+    height: 30px;
+    background-color: orange; /* 버튼 배경색 */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .submit-button img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+  }
