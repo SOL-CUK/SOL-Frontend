@@ -18,7 +18,7 @@
     height: 125px;
     left: 0px;
     top: 30px;
-    background: #fda839; /* 주황색 (오렌지) */
+    background: #ff9a47; /* 주황색 (오렌지) */
     animation: swap 10s infinite;
 
   }
@@ -28,7 +28,7 @@
     height: 160px;
     left: 181px;
     top: 40px;
-    background: #fda839; /* 진한 주황색 */
+    background: #ff9a47; /* 진한 주황색 */
     animation: swap 10s infinite;
 
   }

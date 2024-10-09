@@ -6,7 +6,7 @@
   }
   
   .main-icon {
-    margin-top: 150px;
+    margin-top: 50px;
     width: 120px;
     height: 150px;
   }
@@ -16,7 +16,7 @@
 .greeting-text {
     font-size: 24px;
     font-weight: bold;
-    color: rgba(255, 166, 0, 0.699);
+    color: rgba(0, 0, 0, 0.699);
     margin-bottom: 30px;
     line-height: 1.5;
     white-space: nowrap; /* 줄바꿈 방지 */
@@ -59,6 +59,8 @@
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* 채팅 입력창 스타일 */
@@ -92,3 +94,121 @@
     height: 70%;
     object-fit: contain;
   }
+  .region-container {
+    width: 90%;
+    aspect-ratio: 2/1;
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle, #ffffff 0%, #e1c2a8 100%); /* 연한 갈색 그라데이션 */
+    
+    /* 찢어진 경계선 설정 */
+    clip-path: polygon(
+      2% 10%, 20% 10%, 30% 20%, 50% 10%, 50% 15%, 90% 10%, 80% 20%, 90% 0%, 
+      90% 0%, 100% 10%, 100% 100%, 90% 80%, 80% 90%, 70% 80%, 60% 90%, 
+      50% 85%, 40% 90%, 30% 80%, 20% 90%, 10% 80%, 0% 100%
+    );
+    
+    /* 입체감을 위한 그림자 추가 */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3), /* 외부 그림자 */
+                inset -5px -5px 10px rgba(0, 0, 0, 0.4), /* 찢어진 부분의 입체감을 위한 내부 그림자 */
+                inset 5px 5px 10px rgba(255, 255, 255, 0.5); /* 밝은 부분 강조 */
+    
+    transition: box-shadow 0.3s ease;
+  }
+  .region-container:hover {
+    /* 마우스 오버 시 입체감 강화 */
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3), 
+                inset 0 7px 12px rgba(255, 255, 255, 0.6);
+  }
+  
+  
+  
+  
+  .region-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: repeating-linear-gradient(
+      to right, 
+      transparent, transparent 16.67%, /* 6등분 */
+      gray 16.67%, gray 17%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent, transparent 50%, /* 상하 2등분 */
+      gray 50%, gray 51%
+    );
+  }
+  .region-title {
+    color: rgba(0, 0, 0, 0.699);;
+    margin-top: 50px; /* 마진 탑 20px */
+    font-size: 25px; /* 글자 크기 25px */
+    font-weight: bold; /* 글자 굵기 bold */
+    text-align: left; /* 왼쪽 정렬 */
+  }
+  /* 상단 및 하단 6개의 구역을 클릭 가능한 버튼처럼 설정 */
+  .region-button {
+    position: absolute;
+    width: 16.67%; /* 6등분에 맞추어 각 구역의 크기 설정 */
+    height: 50%; /* 상하 50%로 나누어진 영역 */
+    border-radius: 10px; /* 둥근 모서리로 입체감 강화 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  
+    /* 입체감을 위한 기본 그림자 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), /* 외부 그림자 */
+                inset 0 2px 5px rgba(255, 255, 255, 0.3); /* 내부 밝은 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .region-button:hover {
+    /* 마우스 hover 시 입체감을 강화하여 떠오르는 효과 */
+    transform: translateY(-5px); /* 살짝 위로 이동 */
+    /* 더 밝은 배경색 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* 더 강한 그림자 */
+                inset 0 2px 5px rgba(255, 255, 255, 0.5);
+  }
+  
+  .region-button:active {
+    /* 클릭 시 버튼이 눌리는 효과 */
+    transform: translateY(2px); /* 눌렸을 때 살짝 내려감 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), /* 눌릴 때 그림자 감소 */
+                inset 0 1px 3px rgba(255, 255, 255, 0.3); /* 내부 그림자 유지 */
+  }
+  
+  .region-text {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: bolder;
+
+  }
+  
+  /* 각 버튼의 위치 설정 (상단 6개) */
+  .region-button.top-1 { top: 8%; left: 0; }
+  .region-button.top-2 { top: 8%; left: 16.67%; }
+  .region-button.top-3 { top: 8%; left: 33.34%; }
+  .region-button.top-4 { top: 8%; left: 50%; }
+  .region-button.top-5 { top: 8%; left: 66.67%; }
+  .region-button.top-6 { top: 8%; left: 83.34%; }
+  
+  /* 각 버튼의 위치 설정 (하단 6개) */
+  .region-button.bottom-1 { bottom: 8%; left: 0; }
+  .region-button.bottom-2 { bottom: 8%; left: 16.67%; }
+  .region-button.bottom-3 { bottom: 8%; left: 33.34%; }
+  .region-button.bottom-4 { bottom: 8%; left: 50%; }
+  .region-button.bottom-5 { bottom: 8%; left: 66.67%; }
+  .region-button.bottom-6 { bottom: 8%; left: 83.34%; }
